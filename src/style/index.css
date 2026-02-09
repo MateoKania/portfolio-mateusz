@@ -1,0 +1,28 @@
+@import "tailwindcss";
+
+.bg-grid {
+  background-image:
+    linear-gradient(to right, #3c3d41 1px, transparent 1px),
+    linear-gradient(to bottom, #3c3d41 1px, transparent 1px);
+  background-size: 150px 150px;
+}
+
+.text-burlywood {
+  color: rgb(255, 145, 0);
+}
+
+.font-family {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.font-cursive {
+  font-family: cursive;
+}
+
+.bg-burlywood {
+  background-color: rgb(255, 145, 0);
+}
+
+html {
+  scroll-behavior: smooth;
+}
