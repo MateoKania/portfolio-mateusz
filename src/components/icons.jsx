@@ -14,13 +14,13 @@ export function LinkedinIcon() {
   );
 }
 
-export function GithubIcon() {
+export function GithubIcon({ width, heigth }) {
   return (
     <>
       <svg
         fill="#ffffff"
-        width="24"
-        height="24"
+        width={width}
+        height={heigth}
         viewBox="0 0 24 24"
         xmlns="http://www.w3.org/2000/svg"
         stroke="#ffffff"
@@ -55,47 +55,57 @@ export function DownloadSvg() {
   );
 }
 
-export function HabilitiesIcon() {
+export function EyeSvg() {
   return (
     <>
-      <div className="flex flex-row space-x-5 justify-center mt-10">
-        <img
-          className="flex h-20 rounded-2xl hover:scale-110  w-20 p-3.5 bg-amber-50 border-2 border-amber-700 justify-center items-center"
-          src="assets/html.svg"
-          alt="icono-html"
-          title="HTML"
-        />
-        <img
-          className="flex h-20 rounded-2xl hover:scale-110  w-20 p-3.5 bg-amber-50 border-2 border-amber-700 justify-center items-center"
-          src="assets/css.svg"
-          alt="icono-css"
-          title="CSS"
-        />
-        <img
-          className="flex h-20 rounded-2xl w-20 p-3.5 hover:scale-110  bg-amber-50 border-2 border-amber-700 justify-center items-center"
-          src="assets/js.svg"
-          alt="icono-js"
-          title="JavaScript"
-        />
-        <img
-          className="flex h-20 rounded-2xl w-20 p-3.5 hover:scale-110  bg-amber-50 border-2 border-amber-700 justify-center items-center"
-          src="assets/ts.svg"
-          alt="icono-ts"
-          title="TypeScript"
-        />
-        <img
-          className="flex h-20 rounded-2xl hover:scale-110  w-20 p-3.5 bg-amber-50 border-2 border-amber-700 justify-center items-center"
-          src="assets/react.svg"
-          alt="icono-react"
-          title="React"
-        />
-        <img
-          className=" hover:scale-110 flex h-20 rounded-2xl w-20 p-3.5 bg-amber-50 border-2 border-amber-700 justify-center items-center"
-          src="assets/tailwind.svg"
-          alt="icono-tailwind"
-          title="Tailwind CSS"
-        />
-      </div>
+      <svg
+        width="36"
+        height="36"
+        viewBox="0 0 24 24"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <g id="SVGRepo_bgCarrier" stroke-width="36"></g>
+        <g
+          id="SVGRepo_tracerCarrier"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        ></g>
+        <g id="SVGRepo_iconCarrier">
+          <path
+            d="M12 16.01C14.2091 16.01 16 14.2191 16 12.01C16 9.80087 14.2091 8.01001 12 8.01001C9.79086 8.01001 8 9.80087 8 12.01C8 14.2191 9.79086 16.01 12 16.01Z"
+            stroke="#ffffff"
+            stroke-width="1.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          ></path>
+          <path
+            d="M2 11.98C8.09 1.31996 15.91 1.32996 22 11.98"
+            stroke="#ffffff"
+            stroke-width="1.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          ></path>{" "}
+          <path
+            d="M22 12.01C15.91 22.67 8.09 22.66 2 12.01"
+            stroke="#ffffff"
+            stroke-width="1.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          ></path>
+        </g>
+      </svg>
     </>
+  );
+}
+
+export function TechIcon({ src, alt, title }) {
+  return (
+    <img
+      className="flex h-20 w-20 p-3.5 rounded-2xl bg-amber-50 border-2 border-amber-700 hover:scale-110 transition-transform duration-200"
+      src={src}
+      alt={alt}
+      title={title}
+    />
   );
 }

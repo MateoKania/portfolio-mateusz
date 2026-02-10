@@ -13,15 +13,10 @@ export function ButtonDownload({ title, href, titleBut }) {
   );
 }
 
-export function ButtonMedia({ title, href, titleBut }) {
+export function ButtonMedia({ title, href, titleBut, className }) {
   return (
     <>
-      <a
-        className="hover:bg-amber-600 text-white transparent border-2 border-white p-3 rounded-b-2xl w-30 hover:scale-110  justify-center"
-        target="_blank"
-        title={title}
-        href={href}
-      >
+      <a className={className} target="_blank" title={title} href={href}>
         {titleBut}
       </a>
     </>

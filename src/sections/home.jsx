@@ -37,6 +37,7 @@ export function Home() {
         </div>
         <div className="space-x-3 mt-1  flex ">
           <ButtonMedia
+            className="hover:bg-amber-600 text-white transparent border-2 border-white p-3 rounded-b-2xl w-30 hover:scale-110  justify-center"
             title="Enlace a Linkedin"
             href="https://www.linkedin.com/in/mateusz-tomasz-kania-756011359/"
             titleBut={
@@ -47,11 +48,12 @@ export function Home() {
             }
           />
           <ButtonMedia
+            className="hover:bg-amber-600 text-white transparent border-2 border-white p-3 rounded-b-2xl w-30 hover:scale-110  justify-center"
             title="Enlace a Github"
             href="https://github.com/MateoKania"
             titleBut={
               <span className="flex items-center gap-2 justify-center">
-                <GithubIcon />
+                <GithubIcon width="24" heigth="24" />
                 Github
               </span>
             }

@@ -4,7 +4,7 @@ import { TextAbout, Image } from "../components/cardAbout";
 export function About() {
   return (
     <>
-      <section id="about" className="mb-16">
+      <section id="about" className="mb-16 scroll-mt-24">
         <TextH1 text="Sobre Mi" />
         <div className="flex flex-row text-white w-4/5 justify-center h-8/12 items-center mx-auto mt-20 space-x-10 ">
           <Image
