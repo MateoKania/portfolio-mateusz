@@ -9,7 +9,7 @@ export function About() {
         <div className="flex flex-row text-white w-4/5 justify-center h-8/12 items-center mx-auto mt-20 space-x-10 ">
           <Image
             className=" flex h-90 rounded-2xl items-start"
-            href="/public/assets/fotoMateo.jpg"
+            href="/assets/fotoMateo.JPG"
             alt="Foto Perfil Mateusz"
           />
           <TextAbout className="w-6/12 h-100 flex items-center" />

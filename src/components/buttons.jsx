@@ -22,3 +22,17 @@ export function ButtonMedia({ title, href, titleBut, className }) {
     </>
   );
 }
+
+export function ButtonContact({ className, text }) {
+  return (
+    <>
+      <a
+        href="https://mail.google.com/mail/?view=cm&fs=1&to=mateokaniadev@gmail.com"
+        target="_blank"
+        className={className}
+      >
+        <p>{text}</p>
+      </a>
+    </>
+  );
+}

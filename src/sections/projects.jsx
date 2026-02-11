@@ -11,12 +11,12 @@ export function Projects() {
         <ProjectCard1
           titleProject="Agenda Diaria"
           images={[
-            "/public/assets/agenda1.png",
-            "/public/assets/agendaTareas.png",
-            "public/assets/agendaTiempo.png",
-            "public/assets/agendaNoticias.png",
-            "public/assets/AgendaCalendario.png",
-            "public/assets/AgendaCrono.png",
+            "/assets/agenda1.png",
+            "/assets/agendaTareas.png",
+            "/assets/agendaTiempo.png",
+            "/assets/agendaNoticias.png",
+            "/assets/AgendaCalendario.png",
+            "/assets/AgendaCrono.png",
           ]}
           text={
             <>
