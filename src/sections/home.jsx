@@ -6,9 +6,9 @@ export function Home() {
     <>
       <section
         id="home"
-        className="flex flex-col  justify-center items-center min-h-screen w-screen gap-4 "
+        className="flex flex-col  justify-center items-center min-h-screen   gap-4 "
       >
-        <h1 className="text-6xl  text-white font-cursive">
+        <h1 className=" flex text-6xl text-center   text-white font-cursive">
           Mateusz Tomasz Kania
         </h1>
         <h2 className="text-3xl  text-burlywood font-cursive ">

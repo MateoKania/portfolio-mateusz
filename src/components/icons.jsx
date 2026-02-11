@@ -14,7 +14,7 @@ export function LinkedinIcon() {
   );
 }
 
-export function GithubIcon({ width, heigth }) {
+export function GithubIcon({ width = "36", heigth = "36" }) {
   return (
     <>
       <svg
@@ -55,12 +55,12 @@ export function DownloadSvg() {
   );
 }
 
-export function EyeSvg() {
+export function EyeSvg({ width = "36", height = "36" }) {
   return (
     <>
       <svg
-        width="36"
-        height="36"
+        width={width}
+        height={height}
         viewBox="0 0 24 24"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
@@ -102,7 +102,7 @@ export function EyeSvg() {
 export function TechIcon({ src, alt, title }) {
   return (
     <img
-      className="flex h-20 w-20 p-3.5 rounded-2xl bg-amber-50 border-2 border-amber-700 hover:scale-110 transition-transform duration-200"
+      className="flex h-16 w-16 lg:h-20 lg:w-20 p-3 lg:p-3.5 rounded-2xl bg-amber-50 border-2 border-amber-700 hover:scale-110 transition-transform duration-200"
       src={src}
       alt={alt}
       title={title}

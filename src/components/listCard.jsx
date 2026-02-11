@@ -1,6 +1,6 @@
 export function ListCard({ title, items }) {
   return (
-    <div className="w-fit border-2 border-orange-500 rounded-lg p-6">
+    <div className="lg:w-fit w-full border-2 border-orange-500 rounded-lg p-6">
       <h3 className="text-xl text-center font-bold mb-4 text-amber-400">
         {title}
       </h3>

@@ -34,8 +34,8 @@ export function Projects() {
             </>
           }
         />
-        <div className="flex flex-row">
-          <div className="flex w-8/12 justify-center items-center space-x-5 ">
+        <div className="flex flex-col lg:flex-row  w-11/12 lg:w-10/12 mx-auto gap-6 lg:gap-0">
+          <div className="flex w-full lg:w-8/12 justify-center items-center space-x-3 lg:space-x-5 ">
             <TechIcon src="assets/html.svg" alt="icono-html" title="HTML" />
             <TechIcon src="assets/css.svg" alt="icono-css" title="CSS" />
             <TechIcon src="assets/js.svg" alt="icono-js" title="JavaScript" />
@@ -45,25 +45,25 @@ export function Projects() {
               title="Tailwind CSS"
             />
           </div>
-          <div className="flex flex-row space-x-4">
+          <div className="flex flex-row justify-center space-x-4">
             <ButtonMedia
-              className="hover:bg-amber-600 text-white transparent border-2 flex border-white p-3 rounded-2xl w-30 hover:scale-110 items-center  justify-center"
+              className="hover:bg-amber-600 text-white transparent border-2 flex border-white p-2 lg:p-3 rounded-2xl w-28 lg:w-30 hover:scale-110 items-center  justify-center text-sm lg:text-base"
               title="Enlace a Github"
               href="https://github.com/MateoKania/agenda.git"
               titleBut={
-                <span className="flex items-center gap-2 justify-center">
-                  <GithubIcon width="36" heigth="36" />
+                <span className="flex items-center gap-1 lg:gap-2 justify-center">
+                  <GithubIcon width="24" heigth="24" />
                   Github
                 </span>
               }
             />
             <ButtonMedia
-              className="hover:bg-amber-600 text-white transparent border-2 flex border-white p-3 rounded-2xl w-30 hover:scale-110 items-center  justify-center"
+              className="hover:bg-amber-600 text-white transparent border-2 flex border-white p-2 lg:p-3 rounded-2xl w-28 lg:w-30 hover:scale-110 items-center  justify-center text-sm lg:text-base"
               title="Enlace a ver Web"
               href="https://agenda-qp5ga8sax-mateuszs-projects-4c3532a1.vercel.app/"
               titleBut={
-                <span className="flex items-center gap-2 justify-center">
-                  <EyeSvg />
+                <span className="flex items-center gap-1 lg:gap-2 justify-center">
+                  <EyeSvg width="24" height="24" />
                   Web
                 </span>
               }
