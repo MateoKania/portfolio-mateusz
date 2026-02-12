@@ -13,7 +13,7 @@ export function ProjectCard1({ titleProject, images, text, TechIcon }) {
 
   return (
     <>
-      <div className="mt-15 mb-5 lg:mb-10 flex flex-col">
+      <div className="mt-10 mb-5 lg:mb-10 flex flex-col">
         <h3 className="lg:text-3xl px-4 text-2xl text-center font-bold mb-4 lg:mb-6 text-amber-400">
           {titleProject}
         </h3>

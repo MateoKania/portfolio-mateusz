@@ -6,14 +6,12 @@ export function Home() {
     <>
       <section
         id="home"
-        className="flex flex-col  justify-center items-center min-h-screen   gap-4 "
+        className="flex flex-col  justify-center items-center min-h-screen font-inter gap-4 "
       >
-        <h1 className=" flex text-6xl text-center   text-white font-cursive">
+        <h1 className=" flex text-6xl text-center   text-white ">
           Mateusz Tomasz Kania
         </h1>
-        <h2 className="text-3xl  text-burlywood font-cursive ">
-          FrontEnd Developer
-        </h2>
+        <h2 className="text-3xl  text-burlywood  ">FrontEnd Developer</h2>
         <div className="space-x-3 mt-2.5 flex">
           <ButtonDownload
             title="Descargar Curriculum Vitae"

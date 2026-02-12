@@ -9,7 +9,7 @@ export function Contact() {
         id="contact"
       >
         <TextH1 text="Contacto" />
-        <p className="flex text-white justify-center mt-25">
+        <p className="flex text-white justify-center mt-10">
           Si tienes interes en trabajar juntos no dudes en contactar conmigo via
           email directamente, pulsa en el boton de abajo. <br /> Para
           contactarme mediante llamada telefonica, lo tienes en mi Curriculum

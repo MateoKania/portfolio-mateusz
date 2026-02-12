@@ -5,8 +5,8 @@ export function Navbar() {
 
   return (
     <>
-      <div className="w-full flex lg:mx-auto lg:justify-center justify-start  ml-4 ">
-        <nav className="border-2 border-white bg-black font-cursive bg-neutral  w-fit lg:w-8/12 text-burlywood h-15 text-xl rounded-2xl mt-5 fixed z-50">
+      <div className="w-full flex lg:mx-auto lg:justify-center justify-start family-font ml-4 ">
+        <nav className="border-2 border-white bg-black  bg-neutral  w-fit lg:w-8/12 text-burlywood h-15 text-xl rounded-2xl mt-5 fixed z-50">
           <div className="flex items-center justify-between lg:justify-center h-full px-6 lg:px-0">
             <button
               onClick={() => setMenuOpen(!isMenuOpen)}
