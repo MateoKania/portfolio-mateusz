@@ -52,7 +52,3 @@ export function Habilities() {
     </>
   );
 }
-
-{
-  /* <div className="flex flex-row space-x-5 justify-center mt-10"></div> */
-}

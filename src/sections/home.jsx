@@ -6,10 +6,10 @@ export function Home() {
     <>
       <section
         id="home"
-        className="flex flex-col  justify-center items-center min-h-screen font-inter gap-4 "
+        className="flex flex-col  justify-center items-center min-h-screen gap-4 "
       >
         <h1 className=" flex text-6xl text-center   text-white ">
-          Mateusz Tomasz Kania
+          Mateusz Kania
         </h1>
         <h2 className="text-3xl  text-burlywood  ">FrontEnd Developer</h2>
         <div className="space-x-3 mt-2.5 flex">
@@ -57,6 +57,11 @@ export function Home() {
             }
           />
         </div>
+        <p className="text-white border border-amber-600 p-4 rounded-2xl text-center flex text-xl flex-col w-full md:w-5/12">
+          Frontend Developer apasionado por crear experiencias web modernas con
+          React, TypeScript y TailwindCSS. No me detengo ante los desafíos:
+          busco soluciones, aprendo rápido y actúo con decisión.
+        </p>
       </section>
     </>
   );

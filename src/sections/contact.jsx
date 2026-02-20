@@ -5,7 +5,7 @@ export function Contact() {
   return (
     <>
       <section
-        className="scroll-mt-16 mt-25 h-[70vh] w-8/12 justify-center mx-auto"
+        className="scroll-mt-20 mb-16 mt-25 h-[70vh] w-8/12 justify-center mx-auto"
         id="contact"
       >
         <TextH1 text="Contacto" />
@@ -18,7 +18,7 @@ export function Contact() {
         <div className="flex w-fit justify-center mx-auto">
           <ButtonContact
             text="mateokaniadev@gmail.com"
-            className="flex text-white  mt-10 border-white rounded-2xl border-2 w-fit p-5 hover:bg-amber-600"
+            className="flex text-white  mt-5 border-white rounded-2xl border-2 w-fit p-5 hover:bg-amber-600"
           />
         </div>
       </section>

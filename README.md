@@ -1,16 +1,66 @@
-# React + Vite
+# Portfolio Personal – Mateusz Tomasz Kania
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Portfolio desarrollado para mostrar mi trabajo como Frontend Developer, mi experiencia con tecnologías modernas y mi enfoque en crear interfaces limpias, rápidas y centradas en el usuario. Incluye secciones dedicadas a mi presentación, habilidades, proyectos destacados y formas de contacto, todo construido con un diseño responsive y animaciones fluidas.
 
-Currently, two official plugins are available:
+## Tecnologías utilizadas
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+React — construcción de componentes reutilizables y arquitectura SPA.
 
-## React Compiler
+Vite — entorno de desarrollo rápido y optimizado.
 
-The React Compiler is currently not compatible with SWC. See [this issue](https://github.com/vitejs/vite-plugin-react/issues/428) for tracking the progress.
+TailwindCSS — diseño responsive basado en utilidades.
 
-## Expanding the ESLint configuration
+JavaScript / JSX — lógica y estructura del proyecto.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Estructura del proyecto
+
+/src/sections — cada sección principal del portfolio (Home, About, Projects, Contact).
+
+/src/components — botones, iconos y elementos reutilizables.
+
+/src/assets — imágenes, documentos y recursos estáticos.
+
+/src/styles — configuración de estilos globales y Tailwind.
+
+## Características principales
+
+Diseño moderno, minimalista y completamente responsive.
+
+Secciones organizadas y fáciles de mantener.
+
+Descarga directa de CV y carta de presentación.
+
+Código limpio, modular y escalable.
+
+## Objetivo del proyecto
+
+El objetivo de este portfolio es mostrar mis habilidades como desarrollador frontend, tanto a nivel técnico como visual. Me permite demostrar:
+
+Dominio de React y su ecosistema.
+
+Capacidad para crear interfaces atractivas con TailwindCSS.
+
+Organización de proyectos reales y mantenibles.
+
+Buenas prácticas en componentes, hooks y estructura de carpetas.
+
+## Lo que aprendí
+
+Crear un sistema de secciones modular y escalable.
+
+Mejorar la accesibilidad y la experiencia de usuario.
+
+Optimizar estilos con TailwindCSS y evitar CSS innecesario.
+
+Gestionar navegación y estructura en una SPA real.
+
+## Demo
+
+Portfolio desplegado en Netlify:
+https://mateuszkaniadev.netlify.app/
+
+## Contacto
+
+LinkedIn: https://www.linkedin.com/in/mateusz-tomasz-kania-756011359/
+
+GitHub: https://github.com/MateoKania

@@ -2,7 +2,6 @@ import { useState } from "react";
 
 export function Navbar() {
   const [isMenuOpen, setMenuOpen] = useState(false);
-
   return (
     <>
       <div className="w-full flex lg:mx-auto lg:justify-center justify-start family-font ml-4 ">
