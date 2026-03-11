@@ -6,7 +6,7 @@ export function Home() {
     <>
       <section
         id="home"
-        className="flex flex-col  justify-center items-center min-h-screen gap-4 "
+        className="animate-zoom-in animate-duration-1000  flex flex-col  justify-center items-center min-h-screen gap-4 "
       >
         <h1 className=" flex text-6xl text-center   text-white ">
           Mateusz Kania
@@ -17,7 +17,7 @@ export function Home() {
             title="Descargar Curriculum Vitae"
             href="/assets/CurriculumMateo.pdf"
             titleBut={
-              <span className="flex items-center gap-2 justify-center">
+              <span className="flex items-center gap-2 justify-center ">
                 {<DownloadSvg />}CV
               </span>
             }
@@ -35,7 +35,7 @@ export function Home() {
         </div>
         <div className="space-x-3 mt-1  flex ">
           <ButtonMedia
-            className="hover:bg-amber-600 text-white transparent border-2 border-white p-3 rounded-b-2xl w-30 hover:scale-110  justify-center"
+            className="hover:animate-rotational-wave hover:bg-amber-600 text-white transparent border-2 border-white p-3 rounded-b-2xl w-30 hover:scale-110  justify-center"
             title="Enlace a Linkedin"
             href="https://www.linkedin.com/in/mateusz-tomasz-kania-756011359/"
             titleBut={
@@ -46,7 +46,7 @@ export function Home() {
             }
           />
           <ButtonMedia
-            className="hover:bg-amber-600 text-white transparent border-2 border-white p-3 rounded-b-2xl w-30 hover:scale-110  justify-center"
+            className="hover:animate-rotational-wave hover:bg-amber-600 text-white transparent border-2 border-white p-3 rounded-b-2xl w-30 hover:scale-110  justify-center"
             title="Enlace a Github"
             href="https://github.com/MateoKania"
             titleBut={
@@ -57,7 +57,7 @@ export function Home() {
             }
           />
         </div>
-        <p className="text-white border border-amber-600 p-4 rounded-2xl text-center flex text-xl flex-col w-full md:w-5/12">
+        <p className="hover:animate-tilt text-white border border-amber-600 p-4 rounded-2xl text-center flex text-xl flex-col w-full md:w-5/12">
           Frontend Developer apasionado por crear experiencias web modernas con
           React, TypeScript y TailwindCSS. No me detengo ante los desafíos:
           busco soluciones, aprendo rápido y actúo con decisión.

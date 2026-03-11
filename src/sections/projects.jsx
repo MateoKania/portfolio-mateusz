@@ -6,7 +6,10 @@ import { ButtonMedia } from "../components/buttons";
 export function Projects() {
   return (
     <>
-      <section id="projects" className="scroll-mt-24">
+      <section
+        id="projects"
+        className=" timeline-view animate-blurred-fade-in animate-range-[entry_0%_contain_5%] scroll-mt-24"
+      >
         <TextH1 text="Proyectos" />
         <ProjectCard1
           titleProject="Crypto Info"

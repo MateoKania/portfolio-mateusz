@@ -28,7 +28,10 @@ const idiomas = [
 export function Habilities() {
   return (
     <>
-      <section id="skills" className="scroll-mt-24 mb-16">
+      <section
+        id="skills"
+        className="timeline-view animate-blurred-fade-in animate-range-[entry_0%_contain_50%] scroll-mt-24 mb-16"
+      >
         <TextH1 text="Habilidades" />
         <div className="flex flex-col md:flex-row w-fit md:w-6/12 space-y-6 md:space-y-0 mx-auto mt-10 md:space-x-10 ">
           <ListCard title="Tecnologias" items={tecnologias} />
