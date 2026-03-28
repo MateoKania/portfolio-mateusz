@@ -18,26 +18,28 @@ export function ProjectCard1({ titleProject, images, text, TechIcon }) {
           {titleProject}
         </h3>
         <div className="flex flex-col lg:flex-row lg:w-8/12 w-11/12 justify-center items-center space-y-2 lg:space-y-0 lg:space-x-5 mx-auto ">
-          <div className="relative w-full lg:w-6/12">
-            <img
-              className="
-           h-auto lg:h-70 flex items-center rounded-2xl border-2 w-full object-cover border-white "
-              src={images[index]}
-              alt="Fotos Web"
-            />
-            <button
-              onClick={prevImage}
-              className="absolute left-2 top-1/2 -translate-y-1/2 bg-black/50 text-white px-2 lg:px-3 py-1 rounded-full text-xl lg:text-2xl hover:bg-black/70"
-            >
-              ‹
-            </button>
+          <div className="relative w-full lg:w-6/12 rounded-3xl p-[2px] bg-gradient-to-br from-amber-400/80 via-amber-200/30 to-amber-500/50 shadow-[0_20px_50px_rgba(251,191,36,0.2)] transition-transform duration-300 hover:-translate-y-1">
+            <div className="relative rounded-[22px] overflow-hidden border border-amber-400/70 bg-black/80 backdrop-blur-sm">
+              <img
+                className="
+           h-60 lg:h-72 flex items-center w-full object-contain bg-neutral-950 p-2 "
+                src={images[index]}
+                alt="Fotos Web"
+              />
+              <button
+                onClick={prevImage}
+                className="absolute left-2 top-1/2 -translate-y-1/2 bg-black/60 border border-white/30 text-white px-2 lg:px-3 py-1 rounded-full text-xl lg:text-2xl hover:bg-amber-500/80 transition-colors"
+              >
+                ‹
+              </button>
 
-            <button
-              onClick={nextImage}
-              className="absolute right-2 top-1/2 -translate-y-1/2 bg-black/50 text-white lg:px-3 px-2 py-1 rounded-full text-xl lg:text-2xl hover:bg-black/70"
-            >
-              ›
-            </button>
+              <button
+                onClick={nextImage}
+                className="absolute right-2 top-1/2 -translate-y-1/2 bg-black/60 border border-white/30 text-white lg:px-3 px-2 py-1 rounded-full text-xl lg:text-2xl hover:bg-amber-500/80 transition-colors"
+              >
+                ›
+              </button>
+            </div>
           </div>
           <div className="flex w-full lg:w-6/12 px-4 lg:px-0">
             <p className="text-white text-sm lg:text-base lg:h-70 h-auto flex leading-relaxed ">
