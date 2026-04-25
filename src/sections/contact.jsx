@@ -5,25 +5,31 @@ export function Contact() {
   return (
     <>
       <section
-        className="timeline-view animate-blurred-fade-in animate-range-[entry_0%_contain_20%] scroll-mt-20  mt-40 h-[70vh] w-8/12 justify-center mx-auto"
         id="contact"
+        className="timeline-view animate-blurred-fade-in animate-range-[entry_0%_contain_20%] 
+        scroll-mt-20 mt-40 h-[70vh] w-8/12 mx-auto flex flex-col items-center"
       >
         <TextH1 text="Contacto" />
-        <p className="flex text-white justify-center mt-10">
-          Si tienes interes en trabajar juntos no dudes en contactar conmigo via
-          email directamente, pulsa en el boton de abajo. <br /> Para
-          contactarme mediante llamada telefonica, lo tienes en mi Curriculum
-          Vitae, espero que te haya gustado.
+
+        <p className="text-white text-center mt-10 leading-relaxed max-w-2xl">
+          Si estás interesado en colaborar o tienes alguna propuesta
+          profesional, puedes contactarme directamente por email pulsando en el
+          botón de abajo. Para llamadas telefónicas, encontrarás mi número en mi
+          Curriculum Vitae.
         </p>
-        <div className="flex w-fit justify-center mx-auto">
+
+        <div className="flex justify-center mt-6">
           <ButtonContact
             text="mateokaniadev@gmail.com"
-            className="flex text-white  mt-5 border-white rounded-2xl border-2 w-fit p-5 hover:bg-amber-600"
+            href="mailto:mateokaniadev@gmail.com"
+            className="text-white border-white border-2 rounded-2xl px-6 py-4 hover:bg-amber-600 transition"
           />
         </div>
+
         <a
-          className="mx-auto w-fit p-4 hover:border-2 hover:rounded-2xl hover:border-amber-600   text-gray-400 flex items-center justify-center mb-4 mt-20 text-lg  hover:text-amber-600 transition-colors duration-300"
           href="#home"
+          className="mt-20 text-gray-400 hover:text-amber-600 transition-colors duration-300 
+          text-lg flex items-center justify-center"
         >
           Volver al Inicio
         </a>

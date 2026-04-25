@@ -1,62 +1,116 @@
 import { useState } from "react";
+import { GithubIcon, EyeSvg } from "./icons";
 
-export function ProjectCard1({ titleProject, images, text, TechIcon }) {
+export function ProjectCard1({
+  titleProject,
+  images,
+  text,
+  TechIcon,
+  github,
+  demo,
+}) {
   const [index, setIndex] = useState(0);
+  const [fade, setFade] = useState(false);
 
-  const nextImage = () => setIndex((next) => (next + 1) % images.length);
+  const changeImage = (newIndex) => {
+    setFade(true);
+    setTimeout(() => {
+      setIndex(newIndex);
+      setFade(false);
+    }, 150);
+  };
+
+  const nextImage = () => changeImage((index + 1) % images.length);
   const prevImage = () =>
-    setIndex((prev) => (prev - 1 + images.length) % images.length);
+    changeImage((index - 1 + images.length) % images.length);
 
   return (
-    <div className="mt-10 mb-5 lg:mb-10 flex flex-col items-center">
-      <h3 className="lg:text-3xl px-4 text-2xl text-center font-bold mb-6 text-amber-400">
+    <div className="mt-10  flex flex-col items-center">
+      <h3 className="text-3xl text-center font-bold text-amber-400">
         {titleProject}
       </h3>
 
-      <div className="flex flex-col w-11/12 max-w-2xl gap-5">
-        {/* IMAGE CAROUSEL */}
-        <div className="relative rounded-3xl p-0.5 bg-linear-to-br from-amber-400/80 via-amber-200/30 to-amber-500/50 shadow-[0_20px_50px_rgba(251,191,36,0.2)] transition-transform duration-300 hover:-translate-y-1">
-          <div className="relative rounded-[22px] overflow-hidden">
-            <img
-              className="w-full aspect-video object-cover"
-              src={images[index]}
-              alt={`${titleProject} screenshot ${index + 1}`}
-            />
+      <div className="relative  w-full flex justify-center">
+        <div
+          className="
+            group relative rounded-2xl overflow-hidden bg-transparent p-2
+            w-[90%] max-w-187.5
+            h-100 lg:h-90 mt-2
+            flex items-center justify-center
+          "
+        >
+          <img
+            className={`
+              max-h-full max-w-full object-contain transition-opacity duration-200 rounded-2xl border-2 border-gray-800
+              ${fade ? "opacity-0" : "opacity-100"}
+            `}
+            src={images[index]}
+            alt={`${titleProject} screenshot`}
+          />
 
-            <div className="absolute bottom-0 left-0 right-0 h-12 bg-linear-to-t from-black/60 to-transparent" />
+          <button
+            onClick={prevImage}
+            className="
+              cursor-pointer absolute left-4 top-1/2 -translate-y-1/2 
+              bg-black/60 border border-white/30 text-white px-3 py-1 
+              rounded-full text-2xl opacity-0 group-hover:opacity-100 
+              transition
+            "
+          >
+            ‹
+          </button>
 
-            <div className="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-1.5">
-              {images.map((_, i) => (
-                <button
-                  key={i}
-                  onClick={() => setIndex(i)}
-                  className={`h-2 rounded-full transition-all duration-300 cursor-pointer ${
-                    i === index ? "bg-amber-400 w-4" : "bg-white/50 w-2"
-                  }`}
-                />
-              ))}
-            </div>
+          <button
+            onClick={nextImage}
+            className="
+              cursor-pointer absolute right-4 top-1/2 -translate-y-1/2 
+              bg-black/60 border border-white/30 text-white px-3 py-1 
+              rounded-full text-2xl opacity-0 group-hover:opacity-100 
+              transition
+            "
+          >
+            ›
+          </button>
+        </div>
+      </div>
 
-            <button
-              onClick={prevImage}
-              className="cursor-pointer absolute left-3 top-1/2 -translate-y-1/2 bg-black/60 border border-white/30 text-white px-3 py-1 rounded-full text-2xl hover:bg-amber-500/80 transition-colors"
-            >
-              ‹
-            </button>
-            <button
-              onClick={nextImage}
-              className="cursor-pointer absolute right-3 top-1/2 -translate-y-1/2 bg-black/60 border border-white/30 text-white px-3 py-1 rounded-full text-2xl hover:bg-amber-500/80 transition-colors"
-            >
-              ›
-            </button>
-          </div>
+      <p className="text-white/90 text-base leading-relaxed w-11/12 lg:w-8/12 text-center lg:text-left mb-6">
+        {text}
+      </p>
+
+      <div className="w-11/12 lg:w-8/12 flex flex-col lg:flex-row justify-between items-center gap-6">
+        <div className="flex flex-wrap gap-3 justify-center lg:justify-start">
+          {TechIcon}
         </div>
 
-        <p className="text-white/90 text-sm lg:text-base leading-relaxed px-1">
-          {text}
-        </p>
+        <div className="flex gap-4">
+          {github && (
+            <a
+              href={github}
+              target="_blank"
+              className="
+                flex items-center gap-2 px-4 py-2 border border-white 
+                rounded-xl bg-black/60 hover:bg-amber-600 transition
+                text-white
+              "
+            >
+              <GithubIcon width="22" height="22" /> Github
+            </a>
+          )}
 
-        <div className="flex flex-wrap gap-2">{TechIcon}</div>
+          {demo && (
+            <a
+              href={demo}
+              target="_blank"
+              className="
+                flex items-center gap-2 px-4 py-2 border border-white 
+                rounded-xl bg-black/60 hover:bg-amber-600 transition text-white
+              "
+            >
+              <EyeSvg width="22" height="22" /> Web
+            </a>
+          )}
+        </div>
       </div>
     </div>
   );

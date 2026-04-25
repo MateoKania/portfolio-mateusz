@@ -1,16 +1,151 @@
+import { useState } from "react";
 import { TextH1 } from "../components/texts";
 import { ProjectCard1 } from "../components/projectCard";
-import { TechIcon, GithubIcon, EyeSvg } from "../components/icons";
-import { ButtonMedia } from "../components/buttons";
+import { SmallProjectCard } from "../components/SmallProjectCard";
+import { ProjectModal } from "../components/ProjectModal";
+import { TechIcon } from "../components/icons";
+
+const qrText = (
+  <>
+    Generador de códigos QR desarrollado con React.js y TailwindCSS, pensado
+    para crear y descargar códigos QR de forma rápida y sencilla.
+    <br /> El usuario puede introducir cualquier texto, enlace o dato que quiera
+    codificar y el sistema genera al instante un QR limpio y legible, listo para
+    usar en proyectos personales o profesionales.
+    <br /> La interfaz está diseñada con un enfoque minimalista y responsive,
+    asegurando una buena experiencia tanto en escritorio como en móvil.
+    <br /> Además, el proyecto incluye la opción de descargar el código QR como
+    imagen, lo que permite integrarlo fácilmente en documentos, presentaciones,
+    carteles o materiales impresos.
+    <br /> A nivel técnico, el generador aprovecha la modularidad de React para
+    separar la lógica de generación del QR de la interfaz, y utiliza TailwindCSS
+    para construir una UI consistente, rápida de iterar y fácil de mantener.
+  </>
+);
+
+const saveMoneyText = (
+  <>
+    Save‑Money es una aplicación completa de gestión financiera personal
+    diseñada para ofrecer al usuario una visión clara, ordenada y detallada de
+    sus ingresos, gastos y hábitos económicos.
+    <br /> El proyecto incluye un sistema de autenticación seguro, un dashboard
+    dinámico con métricas en tiempo real y un flujo de CRUD totalmente funcional
+    para registrar movimientos financieros. <br />
+    El objetivo principal es proporcionar una herramienta intuitiva, rápida y
+    accesible que permita tomar mejores decisiones económicas. <br /> A nivel
+    técnico, la aplicación está construida con Next.js, Supabase y Zustand, lo
+    que permite un rendimiento sólido, un estado global limpio y una experiencia
+    fluida incluso con grandes volúmenes de datos. <br /> La interfaz está
+    diseñada con TailwindCSS, priorizando la claridad visual, la accesibilidad y
+    el diseño mobile‑first.
+  </>
+);
+
+// const surfText = (
+//   <>
+//     Surf Reservations es una plataforma para reservar clases de surf con
+//     autenticación, gestión de horarios y panel de usuario.
+//   </>
+// );
+const favGamesText = (
+  <>
+    Fav‑Games es una aplicación enfocada en la exploración de videojuegos
+    mediante la API de RAWG, permitiendo a los usuarios buscar títulos, ver
+    información detallada y guardar sus favoritos. <br /> El proyecto integra
+    paginación, filtros dinámicos y persistencia local para ofrecer una
+    experiencia rápida, fluida y personalizada. <br /> La aplicación está
+    desarrollada con React, Zustand y TailwindCSS, priorizando el rendimiento,
+    la claridad visual y la modularidad. <br />
+    El flujo de favoritos está optimizado para ser instantáneo y persistente,
+    incluso tras cerrar la aplicación.
+  </>
+);
+const cryptoText = (
+  <>
+    Crypto Info es un dashboard de criptomonedas que muestra precios,
+    variaciones, volumen y capitalización de mercado en tiempo real. <br />
+    El proyecto integra una API externa para obtener datos actualizados y los
+    presenta mediante una interfaz clara, moderna y orientada a la toma de
+    decisiones.
+    <br /> El estado global está gestionado con Zustand, lo que permite una
+    actualización fluida sin recargar la página.
+    <br /> La interfaz está optimizada con TailwindCSS y diseñada para ser
+    visualmente clara incluso con grandes cantidades de datos.
+  </>
+);
+const agendaText = (
+  <>
+    Agenda Diaria es una aplicación que combina tareas, clima y noticias en un
+    único panel productivo.
+    <br /> El objetivo es ofrecer al usuario una visión completa de su día sin
+    necesidad de cambiar entre aplicaciones, integrando información útil y
+    herramientas de organización personal.
+    <br /> El proyecto integra varias APIs externas (clima y noticias) y un
+    sistema de tareas con persistencia local.
+    <br /> La interfaz está diseñada para ser rápida, intuitiva y accesible
+    desde cualquier dispositivo, con un enfoque minimalista y orientado a la
+    productividad.
+  </>
+);
+
+const qrIcons = (
+  <>
+    <TechIcon src="assets/js.svg" />
+    <TechIcon src="assets/react.svg" />
+    <TechIcon src="assets/tailwind.svg" />
+  </>
+);
+const saveMoneyIcons = (
+  <>
+    <TechIcon src="assets/nextjs.svg" />
+    <TechIcon src="assets/ts.svg" />
+    <TechIcon src="assets/react.svg" />
+    <TechIcon src="assets/supabase-icon.svg" />
+    <TechIcon src="assets/tailwind.svg" />
+  </>
+);
+// const surfIcons = (
+//   <>
+//     <TechIcon src="assets/react.svg" />
+//     <TechIcon src="assets/ts.svg" />
+//     <TechIcon src="assets/supabase-icon.svg" />
+//     <TechIcon src="assets/tailwind.svg" />
+//   </>
+// );
+const favGamesIcons = (
+  <>
+    <TechIcon src="assets/react.svg" />
+    <TechIcon src="assets/ts.svg" />
+    <TechIcon src="assets/tailwind.svg" />
+  </>
+);
+const cryptoIcons = (
+  <>
+    <TechIcon src="assets/react.svg" />
+    <TechIcon src="assets/js.svg" />
+    <TechIcon src="assets/tailwind.svg" />
+  </>
+);
+const agendaIcons = (
+  <>
+    <TechIcon src="assets/html.svg" />
+    <TechIcon src="assets/css.svg" />
+    <TechIcon src="assets/js.svg" />
+    <TechIcon src="assets/tailwind.svg" />
+  </>
+);
 
 export function Projects() {
+  const [modalData, setModalData] = useState(null);
+
   return (
     <>
       <section
         id="projects"
-        className=" timeline-view animate-blurred-fade-in animate-range-[entry_0%_contain_5%] scroll-mt-24"
+        className="scroll-mt-24 timeline-view animate-blurred-fade-in animate-range-[entry_0%_contain_20%]"
       >
         <TextH1 text="Proyectos" />
+
         <ProjectCard1
           titleProject="Save-Money"
           images={[
@@ -21,262 +156,107 @@ export function Projects() {
             "/assets/cap5.png",
             "/assets/cap6.png",
           ]}
-          text={
-            <>
-              Save Money es una aplicación web de finanzas personales
-              desarrollada con Next.js, TypeScript, Tailwind CSS y Supabase.
-              Permite a los usuarios registrar gastos por categoría (viaje,
-              comida, combustible…), gestionar suscripciones mensuales fijas y
-              consultar un dashboard con el balance real entre ingresos y gastos
-              de cada mes. Los datos se persisten por usuario en una base de
-              datos PostgreSQL a través de Supabase, que también gestiona la
-              autenticación con registro e inicio de sesión. La interfaz,
-              construida con Tailwind CSS, ofrece un diseño limpio con vista
-              mensual agregada, desglose entre gastos variables y suscripciones,
-              y filtrado por fecha concreta.
-            </>
-          }
-        />
-        <div className="flex flex-col lg:flex-row  w-11/12 lg:w-10/12 mx-auto gap-6 lg:gap-0">
-          <div className="flex w-full lg:w-8/12 justify-center items-center space-x-3 lg:space-x-5 ">
-            <TechIcon
-              src="assets/nextjs.svg"
-              alt="icono-nextjs"
-              title="nextjs"
-            />
-            <TechIcon src="assets/ts.svg" alt="icono-ts" title="TypeScript" />
-            <TechIcon src="assets/react.svg" alt="icono-react" title="React" />
-            <TechIcon
-              src="assets/supabase-icon.svg"
-              alt="icono-supabase"
-              title="Supabase"
-            />
-            <TechIcon
-              src="assets/tailwind.svg"
-              alt="icono-tailwind"
-              title="Tailwind CSS"
-            />
-          </div>
-          <div className="flex flex-row justify-center space-x-4">
-            <ButtonMedia
-              className="hover:bg-amber-600 text-white transparent border-2 flex border-white p-2 lg:p-3 rounded-2xl w-28 lg:w-30 hover:scale-110 items-center  justify-center text-sm lg:text-base"
-              title="Enlace a Github"
-              href="https://github.com/MateoKania/save-money"
-              titleBut={
-                <span className="flex items-center gap-1 lg:gap-2 justify-center">
-                  <GithubIcon width="24" heigth="24" />
-                  Github
-                </span>
-              }
-            />
-            <ButtonMedia
-              className="hover:bg-amber-600 text-white transparent border-2 flex border-white p-2 lg:p-3 rounded-2xl w-28 lg:w-30 hover:scale-110 items-center  justify-center text-sm lg:text-base"
-              title="Enlace a ver Web"
-              href="https://count-money.netlify.app/"
-              titleBut={
-                <span className="flex items-center gap-1 lg:gap-2 justify-center">
-                  <EyeSvg width="24" height="24" />
-                  Web
-                </span>
-              }
-            />
-          </div>
-        </div>
-        <ProjectCard1
-          titleProject="Fav-Games"
-          images={[
-            "/assets/home.png",
-            "/assets/info-game.png",
-            "/assets/login.png",
-            "/assets/mylist.png",
-            "/assets/register.png",
-            "/assets/modi-email-pass.png",
-          ]}
-          text={
-            <>
-              Fav‑Games es una aplicación web desarrollada con React.tsx que
-              permite a los usuarios ver y gestionar sus juegos favoritos,
-              consumiendo la API de RAWG para obtener información actualizada de
-              videojuegos. La app incluye autenticación con Firebase, un sistema
-              de gestión de usuarios que permite cambiar email y contraseña, y
-              listas de favoritos que se guardan en tiempo real para cada
-              usuario. El mayor reto fue profundizar en hooks avanzados de React
-              useState, useEffect, useContext, custom hooks, que utilicé para
-              manejar el estado global, las llamadas asíncronas a la API y la
-              lógica de autenticación de forma más limpia y reutilizable,
-              mejorando la arquitectura del proyecto y preparándolo para futuras
-              escalas.
-            </>
-          }
-        />
-        <div className="flex flex-col lg:flex-row  w-11/12 lg:w-10/12 mx-auto gap-6 lg:gap-0">
-          <div className="flex w-full lg:w-8/12 justify-center items-center space-x-3 lg:space-x-5 ">
-            <TechIcon src="assets/html.svg" alt="icono-html" title="HTML" />
-            <TechIcon src="assets/css.svg" alt="icono-css" title="CSS" />
-            <TechIcon
-              src="assets/tailwind.svg"
-              alt="icono-tailwind"
-              title="Tailwind CSS"
-            />
-            <TechIcon src="assets/ts.svg" alt="icono-ts" title="TypeScript" />
-            <TechIcon src="assets/react.svg" alt="icono-react" title="React" />
-            <TechIcon
-              src="assets/Vitest.svg"
-              alt="icono-vitest"
-              title="Vitest"
-            />
-          </div>
-          <div className="flex flex-row justify-center space-x-4">
-            <ButtonMedia
-              className="hover:bg-amber-600 text-white transparent border-2 flex border-white p-2 lg:p-3 rounded-2xl w-28 lg:w-30 hover:scale-110 items-center  justify-center text-sm lg:text-base"
-              title="Enlace a Github"
-              href=""
-              titleBut={
-                <span className="flex items-center gap-1 lg:gap-2 justify-center">
-                  <GithubIcon width="24" heigth="24" />
-                  Github
-                </span>
-              }
-            />
-            <ButtonMedia
-              className="hover:bg-amber-600 text-white transparent border-2 flex border-white p-2 lg:p-3 rounded-2xl w-28 lg:w-30 hover:scale-110 items-center  justify-center text-sm lg:text-base"
-              title="Enlace a ver Web"
-              href=""
-              titleBut={
-                <span className="flex items-center gap-1 lg:gap-2 justify-center">
-                  <EyeSvg width="24" height="24" />
-                  Web
-                </span>
-              }
-            />
-          </div>
-        </div>
-        <ProjectCard1
-          titleProject="Crypto Info"
-          images={[
-            "/assets/crypto-info-home.png",
-            "/assets/crypto-info-graphics.png",
-            "/assets/crypto-info-favs.png",
-            "/assets/crypto-info-news.png",
-            "/assets/crypto-info-converter.png",
-          ]}
-          text={
-            <>
-              Desarrollar Info‑Cripto me permitió reforzar conceptos esenciales
-              de React y mejorar mi forma de estructurar una aplicación real.
-              Practiqué la creación de componentes reutilizables, la gestión de
-              estado con hooks y el consumo de datos externos de forma
-              controlada. También aprendí a manejar la navegación con React
-              Router y a organizar una SPA de manera clara y mantenible. En la
-              parte visual, trabajar con TailwindCSS me ayudó a construir
-              interfaces responsive de forma más rápida y consistente gracias a
-              las clases utilitarias. En conjunto, fue una experiencia que
-              consolidó mis bases como desarrollador frontend y me dio más
-              soltura trabajando con un stack moderno.
-            </>
-          }
+          text={saveMoneyText}
+          TechIcon={saveMoneyIcons}
+          github="https://github.com/MateoKania/save-money"
+          demo="https://count-money.netlify.app/"
         />
 
-        <div className="flex flex-col lg:flex-row  w-11/12 lg:w-10/12 mx-auto gap-6 lg:gap-0">
-          <div className="flex w-full lg:w-8/12 justify-center items-center space-x-3 lg:space-x-5 ">
-            <TechIcon src="assets/html.svg" alt="icono-html" title="HTML" />
-            <TechIcon src="assets/css.svg" alt="icono-css" title="CSS" />
-            <TechIcon
-              src="assets/tailwind.svg"
-              alt="icono-tailwind"
-              title="Tailwind CSS"
-            />
-            <TechIcon src="assets/js.svg" alt="icono-js" title="JavaScript" />
-            <TechIcon src="assets/react.svg" alt="icono-react" title="React" />
-          </div>
-          <div className="flex flex-row justify-center space-x-4">
-            <ButtonMedia
-              className="hover:bg-amber-600 text-white transparent border-2 flex border-white p-2 lg:p-3 rounded-2xl w-28 lg:w-30 hover:scale-110 items-center  justify-center text-sm lg:text-base"
-              title="Enlace a Github"
-              href="https://github.com/MateoKania/crypto.git"
-              titleBut={
-                <span className="flex items-center gap-1 lg:gap-2 justify-center">
-                  <GithubIcon width="24" heigth="24" />
-                  Github
-                </span>
-              }
-            />
-            <ButtonMedia
-              className="hover:bg-amber-600 text-white transparent border-2 flex border-white p-2 lg:p-3 rounded-2xl w-28 lg:w-30 hover:scale-110 items-center  justify-center text-sm lg:text-base"
-              title="Enlace a ver Web"
-              href="https://info-cripto.netlify.app/"
-              titleBut={
-                <span className="flex items-center gap-1 lg:gap-2 justify-center">
-                  <EyeSvg width="24" height="24" />
-                  Web
-                </span>
-              }
-            />
-          </div>
-        </div>
-        <ProjectCard1
-          titleProject="Agenda Diaria"
-          images={[
-            "/assets/agenda1.png",
-            "/assets/agendaTareas.png",
-            "/assets/agendaTiempo.png",
-            "/assets/agendaNoticias.png",
-            "/assets/AgendaCalendario.png",
-            "/assets/AgendaCrono.png",
-          ]}
-          text={
-            <>
-              Desarrollé una aplicación web de agenda digital que integra
-              tareas, eventos, clima y noticias en tiempo real. <br />
-              En el proyecto apliqué JavaScript modular y TailwindCSS para
-              lograr una arquitectura escalable y un diseño responsive. Integré
-              APIs externas de forma segura y desplegué la aplicación en Netlify
-              y Vercel, adquiriendo experiencia en publicación y optimización de
-              proyectos. <br />
-              Esta experiencia consolidó mis habilidades en frontend y me
-              introdujo a prácticas modernas de desarrollo web, reforzando mi
-              capacidad para crear aplicaciones funcionales y centradas en la
-              experiencia del usuario.
-            </>
-          }
-        />
-        <div className="flex flex-col lg:flex-row  w-11/12 lg:w-10/12 mx-auto gap-6 lg:gap-0">
-          <div className="flex w-full lg:w-8/12 justify-center items-center space-x-3 lg:space-x-5 ">
-            <TechIcon src="assets/html.svg" alt="icono-html" title="HTML" />
-            <TechIcon src="assets/css.svg" alt="icono-css" title="CSS" />
-            <TechIcon src="assets/js.svg" alt="icono-js" title="JavaScript" />
-            <TechIcon
-              src="assets/tailwind.svg"
-              alt="icono-tailwind"
-              title="Tailwind CSS"
-            />
-          </div>
-          <div className="flex flex-row justify-center space-x-4">
-            <ButtonMedia
-              className="hover:bg-amber-600 text-white transparent border-2 flex border-white p-2 lg:p-3 rounded-2xl w-28 lg:w-30 hover:scale-110 items-center  justify-center text-sm lg:text-base"
-              title="Enlace a Github"
-              href="https://github.com/MateoKania/agenda.git"
-              titleBut={
-                <span className="flex items-center gap-1 lg:gap-2 justify-center">
-                  <GithubIcon width="24" heigth="24" />
-                  Github
-                </span>
-              }
-            />
-            <ButtonMedia
-              className="hover:bg-amber-600 text-white transparent border-2 flex border-white p-2 lg:p-3 rounded-2xl w-28 lg:w-30 hover:scale-110 items-center  justify-center text-sm lg:text-base"
-              title="Enlace a ver Web"
-              href="https://agenda-qp5ga8sax-mateuszs-projects-4c3532a1.vercel.app/"
-              titleBut={
-                <span className="flex items-center gap-1 lg:gap-2 justify-center">
-                  <EyeSvg width="24" height="24" />
-                  Web
-                </span>
-              }
-            />
-          </div>
+        {/* <ProjectCard1
+        titleProject="Surf Reservations"
+        images={["/assets/surf1.png", "/assets/surf2.png", "/assets/surf3.png"]}
+        text={surfText}
+        TechIcon={surfIcons}
+      /> */}
+
+        <div className="mt-20 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 w-11/12 mx-auto">
+          <SmallProjectCard
+            title="Fav-Games"
+            image="/assets/home.png"
+            short="Gestor de videojuegos con favoritos."
+            onClick={() =>
+              setModalData({
+                title: "Fav-Games",
+                images: [
+                  "/assets/home.png",
+                  "/assets/info-game.png",
+                  "/assets/login.png",
+                  "/assets/modi-email-pass.png",
+                  "/assets/mylist.png",
+                  "/assets/register.png",
+                ],
+                text: favGamesText,
+                tech: favGamesIcons,
+                github: "https://github.com/MateoKania/fav-games",
+                demo: "netlify.com",
+              })
+            }
+          />
+
+          <SmallProjectCard
+            title="Crypto Info"
+            image="/assets/crypto-info-home.png"
+            short="Dashboard de criptomonedas."
+            onClick={() =>
+              setModalData({
+                title: "Crypto Info",
+                images: [
+                  "/assets/crypto-info-home.png",
+                  "/assets/crypto-info-graphics.png",
+                  "/assets/crypto-info-favs.png",
+                  "/assets/crypto-info-news.png",
+                  "/assets/crypto-info-converter.png",
+                ],
+                text: cryptoText,
+                tech: cryptoIcons,
+                github: "https://github.com/MateoKania/crypto.git",
+                demo: "https://info-cripto.netlify.app/",
+              })
+            }
+          />
+
+          <SmallProjectCard
+            title="Agenda Diaria"
+            image="/assets/agenda1.png"
+            short="Agenda con tareas, clima y noticias."
+            onClick={() =>
+              setModalData({
+                title: "Agenda Diaria",
+                images: [
+                  "/assets/agenda1.png",
+                  "/assets/agendaTareas.png",
+                  "/assets/agendaTiempo.png",
+                  "/assets/agendaNoticias.png",
+                  "/assets/agendaCalendario.png",
+                  "/assets/agendaCrono.png",
+                ],
+                text: agendaText,
+                tech: agendaIcons,
+                github: "https://github.com/MateoKania/agenda.git",
+                demo: "https://agenda-qp5ga8sax-mateuszs-projects-4c3532a1.vercel.app/",
+              })
+            }
+          />
+          <SmallProjectCard
+            title="Generador QR"
+            image="/assets/qr2.png"
+            short="Generador de QR para tu pagina web"
+            onClick={() =>
+              setModalData({
+                title: "Generador de QR",
+                images: ["/assets/Qr1.png", "/assets/qr2.png"],
+                text: qrText,
+                tech: qrIcons,
+                github: "https://github.com/MateoKania",
+                demo: "netlify.com",
+              })
+            }
+          />
         </div>
       </section>
+      {modalData && (
+        <ProjectModal data={modalData} onClose={() => setModalData(null)} />
+      )}{" "}
     </>
   );
 }
