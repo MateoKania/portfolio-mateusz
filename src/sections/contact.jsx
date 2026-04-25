@@ -45,7 +45,7 @@ export function Contact() {
             GitHub
           </a>
           <a
-            href="https://www.linkedin.com/in/mateusz-kania"
+            href="https://www.linkedin.com/in/mateusz-tomasz-kania-756011359/"
             target="_blank"
             className="hover:text-amber-400 transition"
           >
