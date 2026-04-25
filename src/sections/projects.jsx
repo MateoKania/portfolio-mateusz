@@ -2,7 +2,7 @@ import { useState } from "react";
 import { TextH1 } from "../components/texts";
 import { ProjectCard1 } from "../components/projectCard";
 import { SmallProjectCard } from "../components/smallProjectCard";
-import { ProjectModal } from "../components/ProjectModal";
+import { ProjectModal } from "../components/projectModal";
 import { TechIcon } from "../components/icons";
 
 const qrText = (
