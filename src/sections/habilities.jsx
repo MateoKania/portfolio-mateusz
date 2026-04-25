@@ -9,14 +9,15 @@ const tecnologias = [
   "React",
   "TypeScript",
   "Tailwind CSS",
+  "Supabase",
+  "Vitest",
 ];
 const habilidades = [
   "Trabajo en equipo",
   "Resolución de problemas",
-  "Comunicación",
-  "Facilidad para el aprendizaje",
-  "Predisposicion",
-  "Facilidad para tomar decisiones",
+  "Comunicación técnica",
+  "Adaptación rápida",
+  "Organización",
 ];
 const idiomas = [
   "Español - Nativo",
@@ -45,11 +46,19 @@ export function Habilities() {
           <TechIcon src="assets/js.svg" alt="icono-js" title="JavaScript" />
           <TechIcon src="assets/ts.svg" alt="icono-ts" title="TypeScript" />
           <TechIcon src="assets/react.svg" alt="icono-react" title="React" />
+          <TechIcon src="assets/nextjs.svg" alt="icono-nextjs" title="nextjs" />
+
           <TechIcon
             src="assets/tailwind.svg"
             alt="icono-tailwind"
             title="Tailwind CSS"
           />
+          <TechIcon
+            src="assets/supabase-icon.svg"
+            alt="icono-supabase"
+            title="Supabase"
+          />
+          <TechIcon src="assets/Vitest.svg" alt="icono-vitest" title="Vitest" />
         </div>
       </section>
     </>

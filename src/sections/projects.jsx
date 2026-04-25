@@ -12,6 +12,77 @@ export function Projects() {
       >
         <TextH1 text="Proyectos" />
         <ProjectCard1
+          titleProject="Save-Money"
+          images={[
+            "/assets/cap1.png",
+            "/assets/cap2.png",
+            "/assets/cap3.png",
+            "/assets/cap4.png",
+            "/assets/cap5.png",
+            "/assets/cap6.png",
+          ]}
+          text={
+            <>
+              Save Money es una aplicación web de finanzas personales
+              desarrollada con Next.js, TypeScript, Tailwind CSS y Supabase.
+              Permite a los usuarios registrar gastos por categoría (viaje,
+              comida, combustible…), gestionar suscripciones mensuales fijas y
+              consultar un dashboard con el balance real entre ingresos y gastos
+              de cada mes. Los datos se persisten por usuario en una base de
+              datos PostgreSQL a través de Supabase, que también gestiona la
+              autenticación con registro e inicio de sesión. La interfaz,
+              construida con Tailwind CSS, ofrece un diseño limpio con vista
+              mensual agregada, desglose entre gastos variables y suscripciones,
+              y filtrado por fecha concreta.
+            </>
+          }
+        />
+        <div className="flex flex-col lg:flex-row  w-11/12 lg:w-10/12 mx-auto gap-6 lg:gap-0">
+          <div className="flex w-full lg:w-8/12 justify-center items-center space-x-3 lg:space-x-5 ">
+            <TechIcon
+              src="assets/nextjs.svg"
+              alt="icono-nextjs"
+              title="nextjs"
+            />
+            <TechIcon src="assets/ts.svg" alt="icono-ts" title="TypeScript" />
+            <TechIcon src="assets/react.svg" alt="icono-react" title="React" />
+            <TechIcon
+              src="assets/supabase-icon.svg"
+              alt="icono-supabase"
+              title="Supabase"
+            />
+            <TechIcon
+              src="assets/tailwind.svg"
+              alt="icono-tailwind"
+              title="Tailwind CSS"
+            />
+          </div>
+          <div className="flex flex-row justify-center space-x-4">
+            <ButtonMedia
+              className="hover:bg-amber-600 text-white transparent border-2 flex border-white p-2 lg:p-3 rounded-2xl w-28 lg:w-30 hover:scale-110 items-center  justify-center text-sm lg:text-base"
+              title="Enlace a Github"
+              href="https://github.com/MateoKania/save-money"
+              titleBut={
+                <span className="flex items-center gap-1 lg:gap-2 justify-center">
+                  <GithubIcon width="24" heigth="24" />
+                  Github
+                </span>
+              }
+            />
+            <ButtonMedia
+              className="hover:bg-amber-600 text-white transparent border-2 flex border-white p-2 lg:p-3 rounded-2xl w-28 lg:w-30 hover:scale-110 items-center  justify-center text-sm lg:text-base"
+              title="Enlace a ver Web"
+              href="https://count-money.netlify.app/"
+              titleBut={
+                <span className="flex items-center gap-1 lg:gap-2 justify-center">
+                  <EyeSvg width="24" height="24" />
+                  Web
+                </span>
+              }
+            />
+          </div>
+        </div>
+        <ProjectCard1
           titleProject="Fav-Games"
           images={[
             "/assets/home.png",
@@ -49,6 +120,11 @@ export function Projects() {
             />
             <TechIcon src="assets/ts.svg" alt="icono-ts" title="TypeScript" />
             <TechIcon src="assets/react.svg" alt="icono-react" title="React" />
+            <TechIcon
+              src="assets/Vitest.svg"
+              alt="icono-vitest"
+              title="Vitest"
+            />
           </div>
           <div className="flex flex-row justify-center space-x-4">
             <ButtonMedia

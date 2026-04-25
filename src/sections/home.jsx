@@ -11,7 +11,10 @@ export function Home() {
         <h1 className=" flex text-6xl text-center   text-white ">
           Mateusz Kania
         </h1>
-        <h2 className="text-3xl  text-burlywood  ">FrontEnd Developer</h2>
+        <h2 className="text-3xl text-center text-burlywood  ">
+          Frontend Developer <br /> React + TypeScript <br /> Arquitectura
+          limpia y patrones modernos
+        </h2>
         <div className="space-x-3 mt-2.5 flex">
           <ButtonDownload
             title="Descargar Curriculum Vitae"
@@ -58,9 +61,10 @@ export function Home() {
           />
         </div>
         <p className="hover:animate-tilt text-white border border-amber-600 p-4 rounded-2xl text-center flex text-xl flex-col w-full md:w-5/12">
-          Frontend Developer apasionado por crear experiencias web modernas con
-          React, TypeScript y TailwindCSS. No me detengo ante los desafíos:
-          busco soluciones, aprendo rápido y actúo con decisión.
+          Desarrollador Frontend enfocado en crear interfaces modernas, rápidas
+          y escalables. Me especializo en arquitectura limpia, separación de
+          responsabilidades y desarrollo de productos reales con lógica de
+          negocio completa.
         </p>
       </section>
     </>
