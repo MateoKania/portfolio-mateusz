@@ -18,7 +18,6 @@ function App() {
         <Habilities />
         <Projects />
         <Contact />
-        <Footer />
       </Layout>
     </>
   );

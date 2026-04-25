@@ -142,7 +142,7 @@ export function Projects() {
     <>
       <section
         id="projects"
-        className="scroll-mt-24 timeline-view animate-blurred-fade-in animate-range-[entry_0%_contain_20%]"
+        className="scroll-mt-24 timeline-view animate-blurred-fade-in animate-range-[entry_0%_contain_10%]"
       >
         <TextH1 text="Proyectos" />
 
@@ -256,7 +256,7 @@ export function Projects() {
       </section>
       {modalData && (
         <ProjectModal data={modalData} onClose={() => setModalData(null)} />
-      )}{" "}
+      )}
     </>
   );
 }
