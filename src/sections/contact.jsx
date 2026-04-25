@@ -1,4 +1,5 @@
 import { TextH1 } from "../components/texts";
+import { ButtonContact } from "../components/buttons";
 
 export function Contact() {
   return (
@@ -17,12 +18,10 @@ export function Contact() {
         </p>
 
         <div className="flex justify-center mt-8">
-          <a
-            href="mailto:mateokaniadev@gmail.com"
+          <ButtonContact
             className="border border-white/20 rounded-xl px-6 py-4 text-lg font-medium text-white bg-white/5 backdrop-blur-sm hover:border-amber-400 hover:bg-white/10 transition"
-          >
-            mateokaniadev@gmail.com
-          </a>
+            text="mateokaniadev@gmail.com"
+          />
         </div>
 
         <a
